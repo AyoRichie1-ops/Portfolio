@@ -10,7 +10,7 @@ const SocialButtons = () => {
         <div className="grid grid-cols-2 gap-4 mx-auto container pt-[2rem] lg:pt-[8rem] pb-[2rem] lg:pb-[6rem] sm:flex sm:space-x-4">
             <a
                 href="mailto:onanusiabdullateef@gmail.com"
-                className="flex items-center px-3 py-2 lg:py-3 lg:px-7 border-2 border-[#771fdbf8] rounded-md text-sm font-extralight transition duration-900"
+                className="flex items-center px-2 py-2 lg:py-3 lg:px-7 border-2 border-[#771fdbf8] rounded-md text-sm font-extralight transition duration-900"
             >
                 <i className="mr-2"><IoMail className='text-[20px]' /></i> Send an email
             </a>

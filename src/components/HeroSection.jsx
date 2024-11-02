@@ -3,7 +3,7 @@ import SocialButtons from '../components/SocialButton';
 
 const HeroSection = ({ darkMode }) => {
     return (
-        <div className={`${darkMode ? "bg-[#222121] text-white" : "bg-white text-black"} font-itim p-3 md:p-8`}>
+        <div className={`${darkMode ? "bg-[#222121] text-white" : "bg-white text-black"} font-itim p-[1rem] md:p-8`}>
             <div className='mx-auto container pt-[80px]'>
                 <h6 className='font-medium text-[20px] mb-3'>
                     Hey,I'm

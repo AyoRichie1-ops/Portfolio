@@ -38,7 +38,7 @@ const Experience = ({ darkMode }) => {
 
     return (
         <div className={`${darkMode ? "bg-black text-white" : "bg-[#edecec] text-black"} font-itim pt-[3rem]`}>
-            <div className="flex flex-col md:flex-row gap-5 mx-auto container p-3">
+            <div className="flex flex-col md:flex-row gap-5 mx-auto container p-[1rem]">
                 <div className="relative w-full md:w-1/4">
                     <h2 className="text-xl font-semibold mb-[4rem]">EXPERIENCE</h2>
                     <ul className="space-y-2">
@@ -49,7 +49,7 @@ const Experience = ({ darkMode }) => {
                                 className={`cursor-pointer px-4 py-2 rounded-md transition-colors duration-300 relative
                                 ${selectedCompany === company
                                         ? 'bg-gray-700 border-l-4 border-blue-500 font-semibold text-blue-300' // Active state styling
-                                        : 'hover:bg-gray-800 hover:text-white'
+                                        : 'hover:bg-black hover:text-white'
                                     }`}
                             >
                                 {selectedCompany === company && (
@@ -66,7 +66,7 @@ const Experience = ({ darkMode }) => {
                 <div className="w-full md:w-3/4 mt-4 md:mt-0 lg:mt-[5.8rem]">
                     <div className={`transition-opacity duration-500 ${selectedCompany ? 'opacity-100' : 'opacity-0'}`}>
                         {selectedCompany ? (
-                            <div className="p-4 border border-gray-700 rounded-md">
+                            <div className="p-4 border border-black rounded-md">
                                 <div className="flex items-baseline">
                                     <h2 className="text-2xl font-bold">{selectedCompany.position}</h2>
                                     <p className="text-sm md:ml-10">{selectedCompany.duration}</p> {/* Add margin only for larger screens */}

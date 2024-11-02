@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        itim: ["Itim", "cursive"],
+        itim: ["Spectral", "serif"],
         zenDots: ["Zen Dots", "sans-serif"],
       },
     },
