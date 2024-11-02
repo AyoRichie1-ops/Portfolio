@@ -54,10 +54,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </div>
 
             {isOpen && (
-                <div className="lg:hidden mt-2">
+                <div className="lg:hidden mt-2 text-center">
                     <button
                         onClick={downloadResumeAsPDF}
-                        className="block w-full text-left px-4 py-2"
+                        className="block w-full px-4 py-2"
                     >
                         Resume
                     </button>
