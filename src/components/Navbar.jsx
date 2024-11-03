@@ -22,7 +22,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <nav className={`sticky top-0 z-10 ${darkMode ? "bg-[#222121] text-white" : "bg-gray-100 text-gray-800"} p-4 font-itim`}>
             <div className="container mx-auto flex justify-between items-center w-[91%]">
                 <Link to='/'>
-                    <div className="text-2xl font-bold">OA .</div>
+                    <div className="text-2xl font-extrabold">OA .</div>
                 </Link>
 
                 <button onClick={toggleDarkMode} className="lg:hidden ml-[20px]">
@@ -30,13 +30,16 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 </button>
 
                 <div className="hidden lg:flex space-x-8">
-                    <button
+                    {/* <button
                         onClick={downloadResumeAsPDF}
                         className="text-lg font-semibold"
                     >
                         Resume
-                    </button>
-                    <Link to="/contact" className="hover:text-gray-500 font-semibold">Contact</Link>
+                    </button> */}
+                    <Link className='text-lg font-semibold' target='_blank' to='https://drive.google.com/file/d/18UOl2HuZSNLrb_DoZZ3hhLB8jKSlWEHu/view?usp=drive_link'>
+                        Resume
+                    </Link>
+                    <Link to="/contact" className="hover:text-gray-500 font-semibold text-lg">Contact</Link>
                     <button onClick={toggleDarkMode}>
                         {darkMode ? <MdLightMode size={24} /> : <WiMoonWaningCrescent4 className="text-black" size={24} />}
                     </button>
