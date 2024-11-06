@@ -1,13 +1,9 @@
-// Services.js
-import React from 'react';
+import React from 'react'
 
-const Contact = ({ darkMode }) => {
+const Contact = () => {
     return (
-        <div className={`${darkMode ? "bg-black text-white" : "bg-white text-black"} p-6`}>
-            <h1>Our Services</h1>
-            <p>Details about services offered.</p>
-        </div>
-    );
-};
+        <div>Contact</div>
+    )
+}
 
-export default Contact;
+export default Contact

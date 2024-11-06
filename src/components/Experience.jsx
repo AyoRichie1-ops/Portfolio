@@ -30,7 +30,7 @@ const Experience = ({ darkMode }) => {
             location: "Lagos",
             duration: "2023 - present",
             responsibilities: [
-                "Created a website in which small businesses are being help to gain online presence by having their own website.",
+                "Created a website in  which small businesses are being helped to gain online presence by helping them create their own website.",
                 "Integrating with the backend APIs.",
             ],
         },
@@ -41,29 +41,31 @@ const Experience = ({ darkMode }) => {
             <div className="flex flex-col md:flex-row gap-5 mx-auto container p-[1rem] md:p-0">
                 <div className="relative w-full md:w-1/4 pl-4">
                     <h2 className="text-[18px] lg:text-2xl font-semibold mb-[4rem]">EXPERIENCE</h2>
-                    <ul className="space-y-2 border-l-2 border-black">
+                    <ul className={`space-y-2 border-l-2 ${darkMode ? 'border-white' : 'border-black'}`}>
                         {companies.map((company, index) => (
                             <li
                                 key={index}
                                 onClick={() => setSelectedCompany(company)}
                                 className={`cursor-pointer px-4 py-2 transition-colors duration-300
                                     ${selectedCompany === company
-                                        ? 'bg-black text-white font-semibold' // Selected company styling
+                                        ? darkMode
+                                            ? 'bg-white text-black font-semibold' // Selected company styling in dark mode
+                                            : 'bg-black text-white font-semibold' // Selected company styling in light mode
                                         : darkMode
-                                            ? 'hover:bg-white hover:text-black'
-                                            : 'hover:bg-black hover:text-white'
-                                    }
-                                `}
+                                            ? 'hover:bg-white hover:text-black' // Hover effect for dark mode
+                                            : 'hover:bg-black hover:text-white' // Hover effect for light mode
+                                    }`}
                             >
                                 {company.name}
                             </li>
                         ))}
                     </ul>
+
                 </div>
 
-                <div className="w-full md:w-3/4 mt-4 md:mt-0 lg:mt-[5.5rem]">
+                <div className="w-full md:w-3/4 mt-4 md:mt-[5.2rem] lg:mt-[5.5rem]">
                     {selectedCompany ? (
-                        <div className="p-4 border border-black rounded-md transition-opacity duration-500 opacity-100">
+                        <div className={`p-4 border ${darkMode ? 'border-white' : 'border-black'} rounded-md transition-opacity duration-500 opacity-100`}>
                             <div className="flex justify-between items-baseline">
                                 <h2 className="text-2xl font-bold">{selectedCompany.position}</h2>
                                 <p className="text-sm">{selectedCompany.duration}</p>
