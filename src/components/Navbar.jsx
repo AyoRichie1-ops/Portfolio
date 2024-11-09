@@ -36,7 +36,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     >
                         Resume
                     </button> */}
-                    <Link className='text-lg font-semibold' target='_blank' to='https://drive.google.com/file/d/18UOl2HuZSNLrb_DoZZ3hhLB8jKSlWEHu/view?usp=drive_link'>
+                    <Link className='text-lg font-semibold' target='_blank' to='https://drive.google.com/file/d/1hfoRjTnNAIpmZlaPzzVgAyP76ycylxUE/view?usp=sharing'>
                         Resume
                     </Link>
                     <Link to="/contact" className="hover:text-gray-500 font-semibold text-lg">Contact</Link>

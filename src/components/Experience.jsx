@@ -4,26 +4,26 @@ const Experience = ({ darkMode }) => {
     const [selectedCompany, setSelectedCompany] = useState(null);
 
     const companies = [
-        {
-            name: "Selfbook",
-            position: "Software Developer (Remote)",
-            location: "Selfbook / US - New York",
-            duration: "Jun 2021 - Present",
-            responsibilities: [
-                "Developing screens and UI components for the web application using React and Tailwind.",
-                "Fixing UI issues and integrating backend APIs with Redux Saga.",
-            ],
-        },
-        {
-            name: "Wevoz",
-            position: "Backend Developer",
-            location: "Wevoz / US",
-            duration: "2018 - 2020",
-            responsibilities: [
-                "Developed and maintained RESTful APIs for the platform.",
-                "Optimized database queries and improved server response times.",
-            ],
-        },
+        // {
+        //     name: "Selfbook",
+        //     position: "Software Developer (Remote)",
+        //     location: "Selfbook / US - New York",
+        //     duration: "Jun 2021 - Present",
+        //     responsibilities: [
+        //         "Developing screens and UI components for the web application using React and Tailwind.",
+        //         "Fixing UI issues and integrating backend APIs with Redux Saga.",
+        //     ],
+        // },
+        // {
+        //     name: "Wevoz",
+        //     position: "Backend Developer",
+        //     location: "Wevoz / US",
+        //     duration: "2018 - 2020",
+        //     responsibilities: [
+        //         "Developed and maintained RESTful APIs for the platform.",
+        //         "Optimized database queries and improved server response times.",
+        //     ],
+        // },
         {
             name: "Tech Studio Academy",
             position: "Front-End Developer",
