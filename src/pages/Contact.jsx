@@ -103,7 +103,7 @@ const Contact = ({ darkMode }) => {
                     </div>
                     <button
                         type="submit"
-                        className="w-full py-3 mt-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-md hover:bg-gradient-to-l transition-colors"
+                        className="w-full py-3 mt-4 bg-gradient-to-r bg-[#db1fdbf8] text-white font-semibold rounded-md hover:bg-gradient-to-l transition-colors"
                     >
                         Send Message
                     </button>

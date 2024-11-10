@@ -59,7 +59,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             {isOpen && (
                 <div className="lg:hidden mt-2 text-center">
                     <button
-                        onClick={downloadResumeAsPDF}
+                        // onClick={downloadResumeAsPDF}
+                        target='_blank' to='https://drive.google.com/file/d/1hfoRjTnNAIpmZlaPzzVgAyP76ycylxUE/view?usp=sharing'
                         className="block w-full px-4 py-2"
                     >
                         Resume
