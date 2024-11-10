@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Contact = ({ darkMode }) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -18,6 +19,7 @@ const Contact = ({ darkMode }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setIsSubmitting(true);  // Set isSubmitting to true before the fetch
 
         fetch("https://formsubmit.co/1f845537690f2cc0d10804408221877d", {
             method: "POST",
@@ -37,12 +39,18 @@ const Contact = ({ darkMode }) => {
                 console.error("Error:", error);
                 setStatus("Failed");
                 setIsModalOpen(true);
+            })
+            .finally(() => {
+                setIsSubmitting(false); // Reset isSubmitting once fetch is complete
             });
     };
+
 
     const closeModal = () => {
         setIsModalOpen(false);
         setStatus('');
+        setIsSubmitting(false);
+
     };
 
     return (
@@ -103,15 +111,18 @@ const Contact = ({ darkMode }) => {
                     </div>
                     <button
                         type="submit"
-                        className="w-full py-3 mt-4 bg-gradient-to-r bg-[#db1fdbf8] text-white font-semibold rounded-md hover:bg-gradient-to-l transition-colors"
+                        className={`w-full py-3 mt-4 bg-gradient-to-r text-white font-semibold rounded-md hover:bg-gradient-to-l transition-colors ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-green-700 '}`}
+                        disabled={isSubmitting}
+
                     >
-                        Send Message
+                        {isSubmitting ? "Please wait..." : "Send message"}
+
                     </button>
                 </form>
 
                 {/* Modal */}
                 {isModalOpen && (
-                    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50 p-4">
                         <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-lg p-6 max-w-md w-full text-center shadow-md">
                             <h2 className="text-2xl font-semibold mb-4">
                                 {status === 'Success' ? 'Message Sent' : 'Submission Failed'}
