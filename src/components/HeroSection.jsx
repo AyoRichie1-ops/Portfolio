@@ -15,7 +15,7 @@ const HeroSection = ({ darkMode }) => {
                     Onanusi Abdul- Lateef
                 </p>
                 <h2 className='font-semibold text-[20px]'>
-                    A Front-End developer based in Lagos, Nigeria and also a communication and journalism student. A Self-directed Work Study Student motivated to apply education and experience in job role. Excellent listener comfortable completing various tasks to keep operations running smoothly. Enthusiastic Student with superior skills in working in both team-based and independent capacities. Bringing strong work ethic and excellent organizational skills to any setting. Excited to bring above average user skills in information technology and social media. Proficient front-end developer effective at creating robust websites that meet customer objectives. Experienced in collaborating with clients to assess needs, develop plans, and enhance design usability and performance. Skilled in using html, css, javascript, bootstrap, tailwindcss as well as other resources to fulfill design requirements.
+                    A Full-Stack Developer based in Lagos, Nigeria. And also a Communication and Journalism student. Self-motivated and skilled in both independent and team-based roles, with strong organizational abilities. Proficient in front-end development, creating user-centered websites using HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and Node.js with React. Experienced in assessing client needs and enhancing design usability and performance.
                 </h2>
             </div>
             <SocialButtons />
