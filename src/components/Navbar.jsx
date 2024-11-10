@@ -58,7 +58,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
             {isOpen && (
                 <div className="lg:hidden mt-2 text-center">
-                    <Link target='_blank' to='https://drive.google.com/file/d/1hfoRjTnNAIpmZlaPzzVgAyP76ycylxUE/view?usp=sharing'>
+                    <Link target='_blank' to='https://drive.google.com/file/d/1RVsHEmSbPTiHrCfke3RDWY2o1nytYvxB/view?usp=drive_link'>
                         <button
                             // onClick={downloadResumeAsPDF}
                             className="block w-full px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
