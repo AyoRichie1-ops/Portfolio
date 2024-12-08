@@ -19,7 +19,7 @@ const Contact = ({ darkMode }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setIsSubmitting(true);  // Set isSubmitting to true before the fetch
+        setIsSubmitting(true);
 
         fetch("https://formsubmit.co/1f845537690f2cc0d10804408221877d", {
             method: "POST",
@@ -41,82 +41,82 @@ const Contact = ({ darkMode }) => {
                 setIsModalOpen(true);
             })
             .finally(() => {
-                setIsSubmitting(false); // Reset isSubmitting once fetch is complete
+                setIsSubmitting(false);
             });
     };
-
 
     const closeModal = () => {
         setIsModalOpen(false);
         setStatus('');
         setIsSubmitting(false);
-
     };
 
     return (
-        <div className={`${darkMode ? "bg-black text-gray-100" : "bg-gray-100 text-gray-900"} min-h-screen flex items-center justify-center py-10 px-4`}>
+        <div className={`${darkMode ? "bg-black text-white" : "bg-white text-black"} min-h-screen flex items-center justify-center py-10 px-4`}>
             <div className={`container mx-auto max-w-2xl rounded-lg p-6 lg:p-12 ${darkMode ? "shadow-xl shadow-gray-800" : "shadow-lg shadow-gray-300"}`}>
-                <h1 className="text-3xl font-bold mb-6 text-center  dark:text-gray-200">Contact Me</h1>
-                <p className="text-center dark:text-gray-4200 mb-8">
+                <h1 className="text-3xl font-bold mb-6 text-center dark:text-gray-200">Contact Me</h1>
+                <p className="text-center dark:text-gray-200 mb-8">
                     I’d love to hear from you! Whether you have a question or just want to connect, feel free to send me a message.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label htmlFor="name" className="block text-sm font-semibold mb-1">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                placeholder="Your Name"
-                                required
-                                className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700"
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="email" className="block text-sm font-semibold mb-1">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder="Your Email"
-                                required
-                                className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700"
-                            />
-                        </div>
-                    </div>
-                    <div>
-                        <label htmlFor="message" className="block text-sm font-semibold mb-1">
-                            Message
+                    <div className="relative">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border dark:border-gray-700 rounded-md text-gray-900 dark:bg-gray-800 dark:text-gray-100 outline-green-700  placeholder-transparent"
+                        />
+                        <label
+                            htmlFor="name"
+                            className={`${darkMode ? "bg-slate-900 text-gray-50" : "bg-white text-black"} absolute left-4 top-1 text-gray-500 dark:text-gray-400 transform -translate-y-4 scale-75 pointer-events-none transition-all duration-200 ease-in-out origin-left px-1`}
+                        >
+                            Name
                         </label>
+                    </div>
+                    <div className="relative">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-2 border dark:border-gray-700 rounded-md text-gray-900 dark:bg-gray-800 dark:text-gray-100 outline-green-700 placeholder-transparent"
+                        />
+                        <label
+                            htmlFor="email"
+                            className={`${darkMode ? "bg-slate-900 text-gray-50" : "bg-white text-black"} absolute left-4 top-1 text-gray-500 dark:text-gray-400 transform -translate-y-4 scale-75 pointer-events-none transition-all duration-200 ease-in-out origin-left px-1`}
+                        >
+                            Email
+                        </label>
+                    </div>
+                    <div className="relative">
                         <textarea
                             id="message"
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            placeholder="Your Message"
                             required
                             rows="5"
-                            className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700"
+                            className="w-full px-4 py-2 border dark:border-gray-700 rounded-md text-gray-900 dark:bg-gray-800 dark:text-gray-100 outline-green-700 placeholder-transparent"
                         ></textarea>
+                        <label
+                            htmlFor="message"
+                            className={`${darkMode ? "bg-slate-900 text-gray-50" : "bg-white text-black"} absolute left-4 top-1 text-gray-500 dark:text-gray-400 transform -translate-y-4 scale-75 pointer-events-none transition-all duration-200 ease-in-out origin-left px-1`}
+                        >
+                            Message
+                        </label>
                     </div>
                     <button
                         type="submit"
-                        className={`w-full py-3 mt-4 bg-gradient-to-r text-white font-semibold rounded-md hover:bg-gradient-to-l transition-colors ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-green-700 '}`}
+                        className={`w-full py-3 mt-4 text-white font-semibold rounded-md transition-colors ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-green-700 hover:bg-green-800'}`}
                         disabled={isSubmitting}
-
                     >
                         {isSubmitting ? "Please wait..." : "Send message"}
-
                     </button>
                 </form>
 
