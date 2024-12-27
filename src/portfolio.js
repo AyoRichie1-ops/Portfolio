@@ -42,7 +42,9 @@ export const Projects = [
     title: "Task App Website",
     description:
       "Use for creating tasks which you need to do whether it is important or urgently",
-    frontEnd: ["React", "Redux", "Material UI", "Vanilla Css"],
-    backEnd: ["Node.js", "Express", "MongoDB"],
+    technologies: {
+      frontEnd: ["React", "Redux", "Material UI", "Vanilla Css"],
+      backEnd: ["Node.js", "Express", "MongoDB"],
+    },
   },
 ];

@@ -70,7 +70,7 @@ const Experience = ({ darkMode }) => {
                                 <h2 className="text-2xl font-bold">{selectedCompany.position}</h2>
                                 <p className="text-sm">{selectedCompany.duration}</p>
                             </div>
-                            <p className="text-sm mt-3 text-blue-500">{selectedCompany.name}</p>
+                            <a href='https://techstudioacademy.com/' target='blank' className="text-[0.9rem] mt-3 text-blue-500">{selectedCompany.name}</a>
                             <ul className="mt-4 list-disc list-inside space-y-2">
                                 {selectedCompany.responsibilities.map((task, index) => (
                                     <li key={index}>{task}</li>

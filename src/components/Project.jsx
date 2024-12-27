@@ -5,12 +5,27 @@ const Project = () => {
     return (
         <div className="mx-auto container p-[1rem]">
             {Projects.map((p, index) => {
-                const { image, title, description } = p; // Removed _id since it's not in your data
+                const { image, title, description } = p;
                 return (
-                    <div key={index} className="mb-8"> {/* Use index if no unique id */}
-                        <img className="rounded-xl w-[350px] h-[350px] mb-6" src={image} alt={title} />
-                        <h3 className="font-bold xl:text-[26px] text-center">{title}</h3>
-                        <p className="xl:text-[20px] text-[#5A5A5A] text-center">{description}</p>
+                    <div
+                        key={index}
+                        className="mb-8 flex flex-col md:flex-row items-center md:items-start md:space-x-6"
+                    >
+                        {/* Image */}
+                        <div className="bg-slate-600">
+                            <img
+                                className="rounded-xl w-[400px] h-[300px] mb-4 md:mb-0"
+                                src={image}
+                                alt={title}
+                            />
+                        </div>
+                        {/* Text Content */}
+                        <div className="text-center md:text-left">
+                            <h3 className="font-bold xl:text-[26px] p-1">{title}</h3>
+                            <hr />
+                            <p className="xl:text-[20px] text-[#5A5A5A] p-2">{description}</p>
+                            <hr />
+                        </div>
                     </div>
                 );
             })}
