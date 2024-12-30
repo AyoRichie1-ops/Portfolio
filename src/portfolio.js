@@ -14,17 +14,20 @@ export const Projects = [
       frontEnd: ["React", "Redux", "Material UI", "Tailwind Css"],
       backEnd: ["Node.js", "Express", "MongoDB"],
     },
+    livelinks: "https://dph-frontend.vercel.app/",
   },
   {
     _id: 2,
     image: img2,
     title: "Git Meal",
     description:
-      "A Platform used to check out type of foods, ingredients used and also a short video on how to prepare it ",
+      "A Website used in checking recipes, also the ingredients, and watch quick prep videos!",
     technologies: {
       frontEnd: ["React", "Redux", "Material UI", "Vanilla Css"],
       backEnd: ["Node.js", "Express", "MongoDB"],
     },
+    livelinks: "https://gitub-meal.vercel.app/",
+    repo: "https://github.com/AyoRichie1-ops/Gitub-Meal",
   },
   {
     _id: 3,
@@ -35,16 +38,21 @@ export const Projects = [
     technologies: {
       frontEnd: ["React", "Redux", "Material UI", "Vanilla Css"],
     },
+    livelinks: "https://readify-eight.vercel.app/",
+    repo: "https://github.com/AyoRichie1-ops/Readify",
   },
   {
     _id: 4,
     image: img4,
     title: "Task App Website",
+
     description:
       "Use for creating tasks which you need to do whether it is important or urgently",
     technologies: {
       frontEnd: ["React", "Redux", "Material UI", "Vanilla Css"],
       backEnd: ["Node.js", "Express", "MongoDB"],
     },
+    livelinks: "https://task-web-amber.vercel.app/",
+    repo: "https://github.com/AyoRichie1-ops/Task-Web",
   },
 ];
