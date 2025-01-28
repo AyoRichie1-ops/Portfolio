@@ -29,18 +29,18 @@ export const Projects = [
     livelinks: "https://gitub-meal.vercel.app/",
     repo: "https://github.com/AyoRichie1-ops/Gitub-Meal",
   },
-  {
-    _id: 3,
-    image: img3,
-    title: "Readify",
-    description:
-      "A Website which lends out books for people that love to read online",
-    technologies: {
-      frontEnd: ["React", "Redux", "Material UI", "Vanilla Css"],
-    },
-    livelinks: "https://readify-eight.vercel.app/",
-    repo: "https://github.com/AyoRichie1-ops/Readify",
-  },
+  // {
+  //   _id: 3,
+  //   image: img3,
+  //   title: "Readify",
+  //   description:
+  //     "A Website which lends out books for people that love to read online",
+  //   technologies: {
+  //     frontEnd: ["React", "Redux", "Material UI", "Vanilla Css"],
+  //   },
+  //   livelinks: "https://readify-eight.vercel.app/",
+  //   repo: "https://github.com/AyoRichie1-ops/Readify",
+  // },
   {
     _id: 4,
     image: img4,
