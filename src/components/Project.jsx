@@ -30,12 +30,12 @@ const Project = () => {
                             <hr />
                             {/* Technologies */}
                             <div className="mt-4">
-                                <h4 className="font-semibold text-[18px]">Technologies:</h4>
+                                <h4 className="font-bold text-[18px]">Technologies:</h4>
                                 <div className="flex md:flex-wrap flex-col md:flex-row gap-2 mt-2">
                                     {/* Front-End */}
                                     {technologies.frontEnd && (
                                         <div className="md:flex items-center">
-                                            <span className="font-medium text-[16px] mr-2">
+                                            <span className="font-semibold text-[16px] mr-2">
                                                 Front-End:
                                             </span>
                                             <div className="flex md:flex-wrap flex-col md:flex-row gap-1">
@@ -53,7 +53,7 @@ const Project = () => {
                                     {/* Back-End */}
                                     {technologies.backEnd && (
                                         <div className="md:flex items-center mt-2 md:mt-0">
-                                            <span className="font-medium text-[16px] mr-2">
+                                            <span className="font-semibold text-[16px] mr-2">
                                                 Back-End:
                                             </span>
                                             <div className="flex md:flex-wrap flex-col md:flex-row gap-2">
