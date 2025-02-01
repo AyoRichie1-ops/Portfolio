@@ -20,6 +20,7 @@ const Project = () => {
                                 className="rounded-xl w-full h-full object-cover"
                                 src={image}
                                 alt={title}
+                                loading="lazy"
                             />
                         </div>
                         {/* Text Content */}
