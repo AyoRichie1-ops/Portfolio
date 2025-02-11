@@ -15,9 +15,9 @@ const Project = () => {
                         className="mb-8 flex flex-col md:flex-row items-center md:items-start md:space-x-6"
                     >
                         {/* Image */}
-                        <div className="bg-slate-600 md:w-[400px] md:h-[300px] p-5 rounded-xl">
+                        <div className="bg-black md:w-[400px] md:h-[300px] p-[0.1rem]">
                             <img
-                                className="rounded-xl w-full h-full object-cover"
+                                className="w-full h-full object-cover"
                                 src={image}
                                 alt={title}
                                 loading="lazy"
@@ -32,11 +32,11 @@ const Project = () => {
                             {/* Technologies */}
                             <div className="mt-4">
                                 <h4 className="font-bold text-[18px]">Technologies:</h4>
-                                <div className="flex md:flex-wrap flex-col md:flex-row gap-2 mt-2">
+                                <div className="flex md:flex-wrap md:flex-row gap-2 mt-2 justify-center md:justify-start">
                                     {/* Front-End */}
                                     {technologies.frontEnd && (
                                         <div className="md:flex items-center">
-                                            <span className="font-semibold text-[16px] mr-2">
+                                            <span className="font-semibold text-[16px] ">
                                                 Front-End:
                                             </span>
                                             <div className="flex md:flex-wrap flex-col md:flex-row gap-1">
@@ -53,7 +53,7 @@ const Project = () => {
                                     )}
                                     {/* Back-End */}
                                     {technologies.backEnd && (
-                                        <div className="md:flex items-center mt-2 md:mt-0">
+                                        <div className="md:flex items-center md:mt-0">
                                             <span className="font-semibold text-[16px] mr-2">
                                                 Back-End:
                                             </span>
