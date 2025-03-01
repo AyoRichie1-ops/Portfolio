@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection';
 import Experience from '../components/Experience';
 import Skills from '../components/Skills';
 import ProjectList from '../components/Project';
+import Footer from '../components/Footer';
 
 const Homepage = ({ darkMode }) => {
     return (
@@ -12,6 +13,8 @@ const Homepage = ({ darkMode }) => {
             <hr />
             <Skills darkMode={darkMode} />
             <ProjectList darkMode={darkMode} />
+            <hr />
+            <Footer darkMode={darkMode} />
         </div>
     );
 };
