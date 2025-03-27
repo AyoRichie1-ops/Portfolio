@@ -80,7 +80,7 @@ const Project = () => {
                                         href={livelinks}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center px-4 py-2 border-2 border-purple-500 rounded-md font-semibold"
+                                        className="flex items-center px-4 py-2 border-2 border-purple-500 rounded-md font-semibold duration-900 transform transition-transform hover:scale-110"
                                     >
                                         <span className="mr-2">🔗</span> Live Demo
                                     </a>
@@ -90,7 +90,7 @@ const Project = () => {
                                         href={repo}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800"
+                                        className="flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 duration-900 transform transition-transform hover:scale-110"
                                     >
                                         <span><FaGithub className='text-[20px]' /></span>
                                     </a>
